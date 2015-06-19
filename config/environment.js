@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'firebase-ember-spending',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://lgwv0cscs30.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
