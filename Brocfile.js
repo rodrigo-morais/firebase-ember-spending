@@ -32,4 +32,6 @@ app.import('bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff',
     destDir: 'fonts'
 });
 
+app.import('bower_components/momentjs/moment.js');
+
 module.exports = app.toTree();

@@ -15,7 +15,8 @@
     "bootstrap-sass": "~3.3.5",
     "bootstrap": "~3.3",
     "ember-addons.bs_for_ember": "~0.7.0",
-    "firebase": "^2.1.0"
+    "firebase": "^2.1.0",
+    "momentjs": "~2.10.3"
   },
   "devDependencies": {
     "bootstrap": "~3.3.5"
