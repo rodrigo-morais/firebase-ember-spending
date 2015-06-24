@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-Ember.Inflector.inflector.irregular('spent', 'spending');
+//Ember.Inflector.inflector.irregular('spent', 'spending');
 
 export default Ember.Route.extend({
     model: function(){
