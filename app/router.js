@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
     this.route('spent', { path: '/'});
     this.route('daily');
+    this.route('monthly');
 });
 
 export default Router;
