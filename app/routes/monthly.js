@@ -41,13 +41,21 @@ export default Ember.Route.extend({
                     endAt: endDate
                 }
             ).then((data) => {
-                let spending = data.get('content');
+                let spending = data.get('content'),
+                    monthlySpending = processData(spending);
+
+                this.get('controller')
+                    .set(   'total', 
+                            monthlySpending.reduce(function(previous, next){
+                                return previous + parseFloat(next.value);
+                            }, 0)
+                    );
 
                 this
                     .get('controller')
                     .set(
                         'content',
-                        processData(spending)
+                        monthlySpending
                     );
             });
     },
@@ -65,13 +73,22 @@ export default Ember.Route.extend({
                         endAt: endDate
                     }
                 ).then(function(data){
-                    let spending = data.get('content');
+                    let spending = data.get('content'),
+                        monthlySpending = processData(spending);
+
+                    _this
+                        .get('controller')
+                        .set(   'total', 
+                                monthlySpending.reduce(function(previous, next){
+                                    return previous + parseFloat(next.value);
+                            }, 0)
+                        );
 
                     _this
                         .get('controller')
                         .set(
                             'content',
-                            processData(spending)
+                            monthlySpending
                         );
                 });
         }

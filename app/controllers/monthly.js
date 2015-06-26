@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-    total: 1000,
+    total: 0,
     filter: {
         years: function(){
             let years = [],
