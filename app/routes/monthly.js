@@ -51,6 +51,17 @@ export default Ember.Route.extend({
                             }, 0)
                     );
 
+                this.get('controller')
+                    .set(   'average', 
+                            parseFloat(
+                                (
+                                    this.get('controller')
+                                        .get('total') /
+                                    monthlySpending.length
+                                ).toString()
+                            ).toFixed(2)
+                    );
+
                 this
                     .get('controller')
                     .set(
@@ -81,7 +92,19 @@ export default Ember.Route.extend({
                         .set(   'total', 
                                 monthlySpending.reduce(function(previous, next){
                                     return previous + parseFloat(next.value);
-                            }, 0)
+                                }, 0)
+                        );
+
+                    _this
+                        .get('controller')
+                        .set(   'average', 
+                                parseFloat(
+                                    (
+                                        _this.get('controller')
+                                            .get('total') /
+                                        monthlySpending.length
+                                    ).toString()
+                                ).toFixed(2)
                         );
 
                     _this
