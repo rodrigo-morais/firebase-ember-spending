@@ -23,7 +23,9 @@ main
 .daily-filter,
 .monthly-filter
 {
-    margin-top: 2%;
+    margin: 2% 0;
+    width: 90%;
+    padding: 0;
 }
 
 #daily
@@ -53,7 +55,9 @@ main
 {
     max-height: 75.5vh;
     height: 75%;
-    margin-top: 4%;
+    margin: 4% 0;
+    width: 100%;
+    padding: 0;
 }
 
 #daily ul li
@@ -102,7 +106,9 @@ main
 {
     max-height: 75.5vh;
     height: 75%;
-    margin-top: 4%;
+    margin: 4% 0;
+    width: 100%;
+    padding: 0;
 }
 
 .per-month .total
